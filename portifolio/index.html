@@ -19,29 +19,31 @@
  <body class="bg-black font-[poppins] text-white from-[#442127] to-[#202b3e] h-screen">
     <section id="Home">
         <header class="bg-black fixed w-full">
-            <nav class=" flex justify-between items-center w-[92%] mx-auto bg-black ">
+            <nav class="flex justify-between items-center w-[92%] mx-auto bg-black">
                 <div>
                     <img class="w-16" src="logo design_✊🏻.jpeg" alt="logo for website">
                 </div>
-                <div
-                    class="md:static absolute md:min-h-fit min-h-[120vh] left-0 top-[9%] md:w-auto w-full flex item-center px-5 ">
-                    <ul class="flex  md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                <div class="md:static absolute md:min-h-fit min-h-[120vh] left-0 top-[9%] md:w-auto w-full flex item-center px-5"
+                     id="navMenu">
+                    <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
                         <li><a class="hover:text-[#fb153b] text-[#fb153b]" href="#Home">Home</a></li>
                         <li><a class="hover:text-[#fb153b]" href="#About">About</a></li>
                         <li><a class="hover:text-[#fb153b]" href="#Service">Service</a></li>
                         <li><a class="hover:text-[#fb153b]" href="#Contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="flex items-center gap-6 ">
+                <div class="flex items-center gap-6">
                     <button class="bg-[#fb153b] text-white px-5 py-2 rounded-sm hover:bg-[#cdb2b6]">Hire me</button>
-                    <i name="menu" class="fa fa-bars text-3xl cursor-pointer md:hidden "></i>
+                    <i name="menu" class="fa fa-bars text-3xl cursor-pointer md:hidden" id="navToggle"></i>
                 </div>
-
             </nav>
         </header>
+        
+       
+        
 <!-------------------------------------------------------------------Home------=----------------------------------------------------->
 
-<div class="flex flex-col md:flex-row items-center w-[92%] mx-auto pt-20 pb-40 gap-10">
+<div class="flex flex-col md:flex-row items-center w-[95%] mx-auto pt-20 pb-40 gap-10">
    
     <div class="md:w-1/2 md:ml-4">
       <p class="text-center md:text-left text-3xl">
@@ -58,11 +60,35 @@
                 class="fa-brands fa-github"></i></a>
     </div>
     </div>
-    <div class="md:w-1/2  h-100%] w-[80%]">
+    <div class="md:w-1/2  h-[100%] w-[100%]">
         <img class="mx-auto md:mx-0 w-full md:w-auto max-w-xs md:max-w-none h-96 " src="home.jpeg" alt="Image">
       </div>
   </div>
   
-        
+<!------------------------------------------------------------------------About------------------------------------------------------------------>
+  <section id="About">
+    <div class="flex flex-col lg:flex-row justify-around items-center mx-auto pt-10 lg:pt-28 pb-10 lg:pb-40 max-w-screen-xl">
+        <div class="w-full lg:w-[40%] h-auto lg:h-96">
+            <img src="about.jpeg" alt="about me image" class="w-full h-full object-cover">
+        </div>
+        <div class="w-full lg:w-[40%] pt-10 lg:pt-20">
+            <p class="text-center lg:text-left">I am a website designer from Rwanda, with a strong focus on front-end development. I love to gain new experiences and analyze and learn from my surroundings.</p>
+            <p class="text-center lg:text-left pt-4">As a highly skilled and experienced computer programmer, I am passionate about writing code and developing high-quality software that meets the needs of my clients.</p>
+            <p class="text-center lg:text-left pt-4">My strong background in computer science, coupled with my commitment to using the best programming practices and tools available, makes me a valuable asset to any software development team.</p>
+            <div class="flex justify-center lg:justify-start items-center pt-8 lg:pt-10">
+                <button class="bg-[#fb153b] text-white px-5 py-2 rounded-sm hover:bg-[#cdb2b6]"><a href="cv.pdf" download>Download</a></button>
+            </div>
+        </div>
+    </div>
+</section>
+  
+<script>
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('hidden');
+    });
+</script>
  </body>
  </html>
