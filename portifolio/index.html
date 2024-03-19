@@ -14,33 +14,45 @@
             rel="stylesheet">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='/src/output.css'>
-    <script src='main.js'></script>
+
  </head>
  <body class="bg-black font-[poppins] text-white from-[#442127] to-[#202b3e] h-screen">
     <section id="Home">
-        <header class="bg-black fixed w-full">
-            <nav class="flex justify-between items-center w-[92%] mx-auto bg-black">
-                <div>
-                    <img class="w-16" src="logo design_✊🏻.jpeg" alt="logo for website">
-                </div>
-                <div class="md:static absolute md:min-h-fit min-h-[120vh] left-0 top-[9%] md:w-auto w-full flex item-center px-5"
-                     id="navMenu">
-                    <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
-                        <li><a class="hover:text-[#fb153b] text-[#fb153b]" href="#Home">Home</a></li>
-                        <li><a class="hover:text-[#fb153b]" href="#About">About</a></li>
-                        <li><a class="hover:text-[#fb153b]" href="#Service">Service</a></li>
-                        <li><a class="hover:text-[#fb153b]" href="#Service">portifolio</a></li>
-                        <li><a class="hover:text-[#fb153b]" href="#Contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="flex items-center gap-6">
-                    <button class="bg-[#fb153b] text-white px-5 py-2 rounded-sm hover:bg-[#cdb2b6]">Hire me</button>
-                    <i name="menu" class="fa fa-bars text-3xl cursor-pointer md:hidden" id="navToggle"></i>
-                </div>
-            </nav>
-        </header>
-        
-       
+        <nav class="bg-black">
+            <div class="flex justify-between items-center  w-full top-0 p-5 fixed font-serif z-10 bg-black text-white">
+              <div class="text-black text-2xl font-bold hover:text-[#fb153b]" font-serif">
+                <img class="w-16" src="logo design_✊🏻.jpeg" alt="logo for website">
+              </div>
+              <div class="hidden md:flex space-x-4">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                  <li><a class="hover:text-[#fb153b] text-[#fb153b]" href="#Home">Home</a></li>
+                  <li><a class="hover:text-[#fb153b]" href="#About">About</a></li>
+                  <li><a class="hover:text-[#fb153b]" href="#Service">Service</a></li>
+                  <li><a class="hover:text-[#fb153b]" href="#Service">portifolio</a></li>
+                  <li><a class="hover:text-[#fb153b]" href="#Contact">Contact</a></li>
+              </ul>
+              </div>
+              <div class="flex items-center gap-6">
+                <button class="bg-[#fb153b] text-white px-5 py-2 rounded-sm hover:bg-[#cdb2b6]">Hire me</button>
+            </div>
+              <div class="md:hidden">
+                <button id="burgerBtn" class="text-gray-400 focus:outline-none hover:text-gray-300">
+                  <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </nav>
+          <div id="mobileMenu" class="md:hidden hidden  w-full py-16 ">
+            <div class="container mx-auto flex flex-col space-y-4 font-serif bg-white   fixed ">
+              <ul class="flex md:flex-row flex-col md:items-center md:gap-[3vw] gap-8">
+                <li><a class="hover:text-[#fb153b] text-[#fb153b]" href="#Home">Home</a></li>
+                <li><a class="hover:text-[#fb153b]" href="#About">About</a></li>
+                <li><a class="hover:text-[#fb153b]" href="#Service">Service</a></li>
+                <li><a class="hover:text-[#fb153b]" href="#Service">portifolio</a></li>
+                <li><a class="hover:text-[#fb153b]" href="#Contact">Contact</a></li>
+            </ul>
+            </div>
+          </div> 
         
 <!-------------------------------------------------------------------Home------=----------------------------------------------------->
 <div class="flex flex-col md:flex-row items-center w-full md:w-[92%] mx-auto pt-10 md:pt-20 pb-10 md:pb-40 gap-10 ">
@@ -160,13 +172,7 @@
             </div>
         </div>
     </section>
-<script>
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('hidden');
-    });
+<script >
 </script>
  </body>
  </html>
